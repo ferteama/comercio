@@ -7,6 +7,7 @@ public class Produto {
 	private String nome;
 	private String codigoBarras;
 	private double preco;
+	private boolean cod_status;
 	
 	//public : Modificador de acesso livre para todas as classes
 	// private: Modificador de acesso restirto apenas para membros 
@@ -53,4 +54,10 @@ public class Produto {
     public double getPreco() {
         return preco;
 }
+    public void setCodStatus(boolean cod_status) {
+    	 this.cod_status = cod_status;
+    }
+    public boolean getCodStatus() {
+    	return cod_status;
+    }
 }
