@@ -2,12 +2,13 @@ package com.itb.inf2dm.comercio.model;
 
 public class Produto {
 
-	private Long id;
+	private long id;
 	private String descricao;
 	private String nome;
 	private String codigoBarras;
 	private double preco;
-	private boolean cod_status;
+	private boolean status;
+	public long setId;
 	
 	//public : Modificador de acesso livre para todas as classes
 	// private: Modificador de acesso restirto apenas para membros 
@@ -45,7 +46,7 @@ public class Produto {
 }
 
     public String getCodigoBarras() {
-        return descricao;
+        return codigoBarras;
 }
     public void setPreco(double preco) {
         this.preco = preco;
@@ -54,10 +55,10 @@ public class Produto {
     public double getPreco() {
         return preco;
 }
-    public void setCodStatus(boolean cod_status) {
-    	 this.cod_status = cod_status;
+    public void setStatus(boolean status) {
+    	 this.status = status;
     }
-    public boolean getCodStatus() {
-    	return cod_status;
+    public boolean getStatus() {
+    	return status;
     }
 }

@@ -25,9 +25,20 @@ public class LojaController {
 		p1.setNome("Máquina de Lavar Brastemp 12 litros");
 		p1.setCodigoBarras("NSJAGGUIASG12313");
 		p1.setPreco(3654.12);
-		p1.setCodStatus(true);
+		p1.setDescricao("COMPUTADOR PICHAU GAMER");
+		p1.setStatus(true);
+		
+		
+		Produto p2 = new Produto();
+		p2.setId(20l);
+		p2.setNome("Máquina de Lavar Brastemp 12 litros");
+		p2.setCodigoBarras("NSJAGGUIASG12313");
+		p2.setPreco(3654.12);
+		p2.setDescricao("COMPUTADOR PICHAU GAMER");
+		p2.setStatus(false);
 		
 	   listaDeProdutos.add(p1);
+	   listaDeProdutos.add(p2);
 	   
 	   model.addAttribute("listaDeProdutos", listaDeProdutos);
 	   

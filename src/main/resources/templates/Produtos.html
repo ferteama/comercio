@@ -15,7 +15,7 @@
     <main class="conteiner bg-light mt-4">
         <div>
             <i class="fas fa-cart-plus ml-2"></i>
-            <a th:href="@{/comercio/produtos/novo-produto}"  class="btn btn-primary m-2">Novo Produto</a>
+            <a th:href="@{/comercio/produtos/novo-prod}"  class="btn btn-primary m-2">Novo Produto</a>
         </div> 
     <div>
         <h2 class="my-5">Produtos</h2>
@@ -38,14 +38,14 @@
                         <td th:text="${produto.id}"></td>
                         <td th:text="${produto.nome}"></td>
                         <td th:text="${produto.codigoBarras}"></td>
-                        <td th:text="${produto.preco}"></td>
+                        <td th:text="${#numbers.formatCurrency(produto.preco)}"></td>
                         <td th:text="${produto.descricao}"></td>
                         <td>
-                            <a href="#"> Editar</a>
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-edit ml-2"></i>
+                            </a>
                         </td>
-                        <td>
-                            <a href="#"> Cod_Status</a>
-                        </td>
+                        <td th:text="${produto.status} ? 'Ativo' : 'Desativo' "></td>
                     </tr>
                 </tbody>
         </table>
