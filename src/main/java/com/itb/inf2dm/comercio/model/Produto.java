@@ -1,9 +1,19 @@
 package com.itb.inf2dm.comercio.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="produtos")
 public class Produto {
 
+	@Id  //PK
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //auto-incremento - começando no id "1"
 	private long id;
-	private String descricao;
+	private String descricao;    
 	private String nome;
 	private String codigoBarras;
 	private double preco;
